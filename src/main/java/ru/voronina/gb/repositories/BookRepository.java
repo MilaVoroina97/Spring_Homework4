@@ -49,7 +49,7 @@ public class BookRepository {
          public Book mapRow(ResultSet resultSet, int i) throws SQLException {
              Book book = new Book();
 
-             book.setId(resultSet.getInt("book_id"));
+             book.setId(resultSet.getInt("bookId"));
              book.setName(resultSet.getString("name"));
              book.setAuthor(resultSet.getString("author"));
              book.setYearOfWriting(resultSet.getInt("yearOfWriting"));

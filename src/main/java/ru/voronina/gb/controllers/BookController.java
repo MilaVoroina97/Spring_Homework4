@@ -1,6 +1,7 @@
 package ru.voronina.gb.controllers;
 
 import lombok.AllArgsConstructor;
+import lombok.extern.java.Log;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -9,6 +10,7 @@ import ru.voronina.gb.repositories.BookRepository;
 
 import java.util.List;
 
+@Log
 @Controller
 @AllArgsConstructor
 @RequestMapping("/books")

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Book</title>
+    <link rel="stylesheet" href="style.css">
+    <link th:href="@{/styles/css/main.css}" rel="stylesheet"/>
+
+</head>
+
+<body>
+
+<p th:text="'Номер : ' + ${book.id}">VALUE</p>
+<p th:text="'Название : ' + ${book.name}">VALUE</p>
+<p th:text="'Автор : ' + ${book.author}">VALUE</p>
+<p th:text="'Год выпуска : ' + ${book.yearOfWriting}">VALUE</p>
+
+
+<br/>
+<br/>
+
+
+<form th:action="@{/books/{id}/edit(id=${book.id})}">
+    <input type="submit" value="Редактировать"/>
+</form>
+
+<form th:method="DELETE" th:action="@{/books/{id}(id=${book.id})}">
+    <input type="submit" value="Удалить книгу"/>
+
+</form>
+
+
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+database:
+  find-all-books: "SELECT * FROM books"
+  save-book: "INSERT INTO books (name,author,yearOfWriting) VALUES ( ?, ?, ?)"
+  get-book-by-id: "SELECT * FROM books WHERE bookId = ?"
+  update-book: "UPDATE books SET name=?, author=?, yearOfWriting=? WHERE bookId=?"
+  delete-book: "DELETE FROM books WHERE bookId=?"

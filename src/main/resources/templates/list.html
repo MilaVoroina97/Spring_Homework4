@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+    <link rel="stylesheet" href="style.css">
+    <link th:href="@{/styles/css/main.css}" rel="stylesheet"/>
+
+</head>
+
+<body>
+<p>Список всех доступных книг:</p>
+
+
+<div th:each="book : ${books}">
+
+    <a th:href="@{/books/{id}(id=${book.id})}"
+       th:text="${book.name + ', ' + book.author + ', ' + book.yearOfWriting}">book</a>
+</div>
+
+<br/>
+
+<a href="/books/new">Введите данные для новой книги</a>
+
+</body>
+
+</html>
